@@ -1,7 +1,0 @@
-config,split,count,official_count
-hindi,train,20,70778
-hindi,validation,20,8847
-hindi,test,20,8847
-english,train,20,306522
-english,validation,20,11535
-english,test,20,11535
