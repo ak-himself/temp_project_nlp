@@ -1,0 +1,167 @@
+{
+  "manifest_version": "1.0",
+  "last_updated": "2026-10-26T11:47:30+05:30",
+  "environment": {
+    "os": "CachyOS Linux (Arch-based)",
+    "shell": "Fish",
+    "python_manager": "pyenv",
+    "required_python": "3.12.8",
+    "virtual_environments_allowed": false,
+    "verification_status": "required Python 3.12.8 installed and verified via PYENV_VERSION=3.12.8; default pyenv selection remains system/Python 3.14.8"
+  },
+  "current_phase": "evaluation_preparation",
+  "completed_task_ids": [
+    "repository-and-interpreter-inspection",
+    "dataset-access-schema-inspection",
+    "bounded-pilot-and-manifests",
+    "dependency-preparation",
+    "annotation-templates-and-guidelines",
+    "candidate-model-metadata-inspection",
+    "model-smoke-tests",
+    "deterministic-fact-checks"
+  ],
+  "in_progress_task_ids": [],
+  "blocked_tasks": [],
+  "datasets": {
+    "xlsum_hindi": {
+      "status": "bounded_pilot_prepared",
+      "revision": "30fece425f9a3866e04321773ca7a80056d55ca6",
+      "license": "CC BY-NC-SA 4.0",
+      "configs": ["hindi"],
+      "splits": {"train": 70778, "validation": 8847, "test": 8847},
+      "fields": ["id", "url", "title", "summary", "text"],
+      "archive_bytes": 82265197,
+      "paired_reference_summary": true,
+      "pilot_records": 60,
+      "limitations": "Legacy dataset script is unsupported by installed datasets; hosted first-row/parquet probes failed."
+    },
+    "xlsum_english": {
+      "status": "bounded_pilot_prepared",
+      "revision": "30fece425f9a3866e04321773ca7a80056d55ca6",
+      "license": "CC BY-NC-SA 4.0",
+      "configs": ["english"],
+      "splits": {"train": 306522, "validation": 11535, "test": 11535},
+      "fields": ["id", "url", "title", "summary", "text"],
+      "archive_bytes": 282122304,
+      "paired_reference_summary": true,
+      "pilot_records": 60,
+      "limitations": "Legacy dataset script is unsupported by installed datasets; hosted first-row/parquet probes failed."
+    },
+    "gupshup": {
+      "status": "blocked_authorized_access_required",
+      "license": "dataset license not established; repository MIT",
+      "tasks": ["h2e", "e2e"],
+      "fields": ["source", "target"],
+      "paired_reference_summary": true,
+      "limitations": "Official repository requires a Google Form request; no bypass attempted."
+    },
+    "mutant": {
+      "status": "bounded_text_only_pilot_prepared",
+      "revision": "e7a454a71d4f9d1f3ebb65544868610e513d9366",
+      "license": "CC BY 4.0",
+      "configs": ["Aap", "Bhaskar", "INC", "Jagran", "Mankibaat", "PM-speech", "PIB"],
+      "documents": 67007,
+      "multi_sentential_texts": 84937,
+      "fields": ["text"],
+      "paired_reference_summary": false,
+      "pilot_records": 16,
+      "limitations": "No paired reference-summary field or standard held-out split found in inspected metadata."
+    },
+    "roman_hinglish_eval": {
+      "status": "not_checked"
+    }
+  },
+  "ner_candidates": {
+    "ai4bharat/IndicNER": {
+      "status": "metadata_checked_gated_auto",
+      "revision": "b56cb5e9bdf37cb0d653e658b3d4dbe563bebf34",
+      "license": "MIT",
+      "languages": ["as", "bn", "gu", "hi", "kn", "ml", "mr", "or", "pa", "ta", "te"],
+      "pipeline": "token-classification"
+    },
+    "theanugrah/muril-indic-ner": {
+      "status": "metadata_checked",
+      "revision": "65e3a1ba76eabd382e76e947d4536e9583d128d5",
+      "license": "Apache-2.0",
+      "languages": ["as", "bn", "gu", "hi", "kn", "ml", "mr", "or", "pa", "ta", "te"],
+      "pipeline": "token-classification",
+      "library": "onnx"
+    },
+    "MichaelHuang/muril_base_cased_hindi_ner": {
+      "status": "smoke_tested_label_mapping_blocked",
+      "revision": "25f24560de6f70ffa86761ab6461e9cc219ace36",
+      "license": "not declared in API metadata",
+      "languages": ["hi"],
+      "pipeline": "token-classification"
+    },
+    "dslim/bert-base-NER": {
+      "status": "metadata_checked",
+      "revision": "d1a3e8f13f8c3566299d95fcfc9a8d2382a9affc",
+      "license": "MIT",
+      "languages": ["en"],
+      "pipeline": "token-classification"
+    }
+  },
+  "nli_candidates": {
+    "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli": {
+      "status": "smoke_tested",
+      "revision": "0a71e92a985b6e1ad1828cf67ce9c459639c1dca",
+      "license": "MIT",
+      "languages": ["multilingual", "hi"],
+      "pipeline": "zero-shot-classification"
+    },
+    "joeddav/xlm-roberta-large-xnli": {
+      "status": "metadata_checked",
+      "revision": "b227ee8435ceadfa86dc1368a34254e2838bf242",
+      "license": "MIT",
+      "languages": ["multilingual", "hi"],
+      "pipeline": "zero-shot-classification"
+    },
+    "MoritzLaurer/mDeBERTa-v3-base-xnli-multilingual-nli-2mil7": {
+      "status": "metadata_checked",
+      "revision": "b5113eb38ab63efdd7f280f8c144ea8b13f978ce",
+      "license": "MIT",
+      "languages": ["multilingual", "hi"],
+      "pipeline": "zero-shot-classification"
+    }
+  },
+  "retrieval_model": {
+    "id": "intfloat/multilingual-e5-small",
+    "status": "smoke_tested",
+    "revision": "614241f622f53c4eeff9890bdc4f31cfecc418b3",
+    "license": "MIT",
+    "languages": ["multilingual", "hi", "en"]
+  },
+  "selected_ner_models": null,
+  "selected_nli_models": null,
+  "groq": {
+    "tested_model": "openai/gpt-oss-20b",
+    "status": "previously_tested_by_user",
+    "credentials_location": ".env",
+    "never_log_credentials": true
+  },
+  "last_successful_checkpoint": "final artifact validation passed; evaluation preparation blockers documented",
+  "next_actions": [
+    "Create manually labelled NER/NLI gold examples from accessible pilots",
+    "Resolve NER label mapping or document exclusion from category scoring",
+    "Benchmark candidates only on comparable gold-labelled data"
+  ],
+  "artifacts": [
+    "AGENT_MANIFEST.md",
+    "AGENT_LOG.md",
+    "PROJECT_STATE.json",
+    "COPILOT_START_PROMPT.md",
+    "scripts/prepare_pilot.py",
+    "data/manifests/xlsum_pilot.json",
+    "data/manifests/xlsum_pilot.csv",
+    "data/manifests/mutant_pilot.json",
+    "data/manifests/mutant_pilot.csv",
+    "data/manifests/model_smoke_tests.json",
+    "data/manifests/ner_annotation_template.csv",
+    "data/manifests/nli_annotation_template.csv",
+    "ANNOTATION_GUIDELINES.md",
+    "scripts/deterministic_checks.py",
+    "data/processed/xlsum/hindi_deterministic_checks.jsonl",
+    "data/processed/xlsum/english_deterministic_checks.jsonl"
+  ]
+}

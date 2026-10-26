@@ -1,0 +1,25 @@
+{
+  "status": "bounded_text_only_pilot",
+  "dataset": "LingoIITGN/MUTANT",
+  "revision": "e7a454a71d4f9d1f3ebb65544868610e513d9366",
+  "license": "CC BY 4.0",
+  "config": "Aap",
+  "split": "train",
+  "fields": [
+    "stable_id",
+    "dataset",
+    "config",
+    "split",
+    "category",
+    "source",
+    "reference_summary",
+    "title"
+  ],
+  "record_count": 16,
+  "paired_reference_summary": false,
+  "source_rows_considered": 32,
+  "limitations": [
+    "Hosted sample returned 16 non-empty records among 32 rows.",
+    "This corpus provides source text only; it is not suitable for reference-based summarization evaluation without human annotations."
+  ]
+}

@@ -1,0 +1,60 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Raw datasets and downloaded archives
+data/raw/
+data/downloads/
+data/cache/
+
+# Model weights and checkpoints
+models/
+model/
+checkpoints/
+*.safetensors
+*.pt
+*.pth
+*.ckpt
+*.onnx
+*.gguf
+*.h5
+*.keras
+pytorch_model.bin
+
+# ML experiment outputs
+outputs/
+runs/
+wandb/
+mlruns/
+lightning_logs/
+
+# Hugging Face and other model caches
+.cache/
+.huggingface/
+transformers_cache/
+torch_cache/
+
+# Dataset archives
+*.tar
+*.tar.gz
+*.tgz
+*.tar.bz2
+*.zip
+*.7z
+
+# Python caches
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+
+# Jupyter
+.ipynb_checkpoints/
+
+# Logs and temporary files
+*.log
+tmp/
+temp/
