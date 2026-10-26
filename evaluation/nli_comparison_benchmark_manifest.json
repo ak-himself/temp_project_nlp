@@ -1,0 +1,69 @@
+{
+  "status": "proposed_not_frozen",
+  "description": "Proposed NLI comparison benchmark. Evidence is copied exactly from source records; all claims and labels require human review.",
+  "example_count": 120,
+  "splits": {
+    "development": 90,
+    "held_out_test": 30
+  },
+  "categories": [
+    "english",
+    "hindi",
+    "code_mixed"
+  ],
+  "roman_hinglish_status": "untested; no genuine mostly_latin records are present in the current MUTANT pilot",
+  "source_files": [
+    "data/processed/xlsum_pilot/english.jsonl",
+    "data/processed/xlsum_pilot/hindi.jsonl",
+    "data/processed/mutant_pilot/code_mixed.jsonl"
+  ],
+  "label_counts": {
+    "entailment": 42,
+    "contradiction": 39,
+    "neutral": 39
+  },
+  "category_counts": {
+    "english": 40,
+    "hindi": 40,
+    "code_mixed": 40
+  },
+  "split_counts": {
+    "development": 90,
+    "held_out_test": 30
+  },
+  "annotation_status_counts": {
+    "awaiting_human_review": 120
+  },
+  "split_category_label_counts": {
+    "development|english|entailment": 10,
+    "development|english|contradiction": 10,
+    "development|english|neutral": 10,
+    "held_out_test|english|entailment": 4,
+    "held_out_test|english|contradiction": 3,
+    "held_out_test|english|neutral": 3,
+    "development|hindi|entailment": 10,
+    "development|hindi|contradiction": 10,
+    "development|hindi|neutral": 10,
+    "held_out_test|hindi|entailment": 4,
+    "held_out_test|hindi|contradiction": 3,
+    "held_out_test|hindi|neutral": 3,
+    "development|code_mixed|entailment": 10,
+    "development|code_mixed|contradiction": 10,
+    "development|code_mixed|neutral": 10,
+    "held_out_test|code_mixed|entailment": 4,
+    "held_out_test|code_mixed|contradiction": 3,
+    "held_out_test|code_mixed|neutral": 3
+  },
+  "provenance_checks": {
+    "exact_evidence_substrings": true,
+    "unique_example_ids": true,
+    "source_record_overlap_between_splits": 0,
+    "synthetic_source_evidence": false
+  },
+  "review_requirements": [
+    "Review every evidence/claim pair and expected label.",
+    "Confirm that phenomenon tags accurately describe each pair.",
+    "Replace weak or unnatural claims before model comparison.",
+    "Approve the development/test split before calling this benchmark frozen."
+  ]
+}

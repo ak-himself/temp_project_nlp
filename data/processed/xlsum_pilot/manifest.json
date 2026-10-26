@@ -1,0 +1,40 @@
+{
+  "dataset": "csebuetnlp/xlsum",
+  "dataset_revision": "30fece425f9a3866e04321773ca7a80056d55d6",
+  "retrieval_date": "2026-10-26",
+  "license": "CC BY-NC-SA 4.0",
+  "license_source": "https://huggingface.co/datasets/csebuetnlp/xlsum",
+  "configs": {
+    "english": {
+      "split": "train",
+      "sample_count": 100,
+      "sample_path": "english.jsonl",
+      "source_archive": "https://huggingface.co/datasets/csebuetnlp/xlsum/resolve/main/data/english_XLSum_v2.0.tar.bz2",
+      "fields": [
+        "id",
+        "url",
+        "title",
+        "summary",
+        "text",
+        "language",
+        "split"
+      ]
+    },
+    "hindi": {
+      "split": "train",
+      "sample_count": 100,
+      "sample_path": "hindi.jsonl",
+      "source_archive": "https://huggingface.co/datasets/csebuetnlp/xlsum/resolve/main/data/hindi_XLSum_v2.0.tar.bz2",
+      "fields": [
+        "id",
+        "url",
+        "title",
+        "summary",
+        "text",
+        "language",
+        "split"
+      ]
+    }
+  },
+  "loading_note": "datasets 5.1.0 rejects the legacy xlsum.py builder; records were streamed from the language archive and stopped after 100 training records without saving the archive."
+}

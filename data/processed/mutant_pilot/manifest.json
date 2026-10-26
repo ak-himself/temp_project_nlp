@@ -1,0 +1,343 @@
+{
+  "dataset": "LingoIITGN/MUTANT",
+  "dataset_revision": "e7a454a71d4f9d1f3ebb65544868610e513d9366",
+  "license": "CC BY 4.0",
+  "attribution": "Lingo Research Group at IIT Gandhinagar",
+  "publication_citation": "Gupta, Rahul, Vivek Srivastava, and Mayank Singh. “MUTANT: A Multi-sentential Code-mixed Hinglish Dataset.” Findings of EACL 2023. https://aclanthology.org/2023.findings-eacl.56/",
+  "retrieval_date": "2026-10-26",
+  "source_url": "https://huggingface.co/datasets/LingoIITGN/MUTANT",
+  "output_file": "code_mixed.jsonl",
+  "requested_counts": {
+    "Bhaskar": 15,
+    "PM-speech": 10,
+    "PIB": 10,
+    "Aap": 10,
+    "Jagran": 10,
+    "INC": 5
+  },
+  "retrieved_counts": {
+    "Bhaskar": 15,
+    "PM-speech": 10,
+    "PIB": 10,
+    "Aap": 10,
+    "Jagran": 10,
+    "INC": 5
+  },
+  "total_requested": 60,
+  "total_retrieved": 60,
+  "script_profile_method": "Count Unicode Devanagari characters (U+0900-U+097F) and ASCII Latin letters (A-Z/a-z). Profiles use ratios among those letters: >=0.80 Devanagari=mostly_devanagari; >=0.60 Devanagari=devanagari_with_latin_terms; >=0.80 Latin=mostly_latin; both ratios >=0.20=mixed_script; otherwise other_or_unclear. This describes script composition, not language fluency or semantic code-switching.",
+  "script_profile_counts": {
+    "devanagari_with_latin_terms": 3,
+    "mixed_script": 9,
+    "mostly_devanagari": 48
+  },
+  "failed_requests": [],
+  "selected_files": [
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1000.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1001.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1005.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1007.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1012.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1014.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1016.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1017.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1019.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1020.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1021.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1026.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1027.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1028.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Bhaskar",
+      "original_path": "bhaskar/Part1/business_1029.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/100.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/101.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/102.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/103.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/104.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/105.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/106.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/107.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/108.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PM-speech",
+      "original_path": "pm-speech/109.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10007.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10008.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10009.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10014.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10016.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10017.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10018.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10019.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10020.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "PIB",
+      "original_path": "pib/10021.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/118.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/125.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/127.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/131.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/143.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/158.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/173.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/183.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/184.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Aap",
+      "original_path": "aap/192.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_0.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_1.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_1000.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100005.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100006.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100007.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100010.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100011.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100024.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "Jagran",
+      "original_path": "Jagran/Part1/jagran_0_100028.txt",
+      "split": "train_part1"
+    },
+    {
+      "configuration": "INC",
+      "original_path": "inc/0.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "INC",
+      "original_path": "inc/1.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "INC",
+      "original_path": "inc/10.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "INC",
+      "original_path": "inc/100.txt",
+      "split": "train"
+    },
+    {
+      "configuration": "INC",
+      "original_path": "inc/101.txt",
+      "split": "train"
+    }
+  ],
+  "reference_summary_note": "MUTANT provides source text only in these records. reference_summary is null and has_reference_summary is false for every record. This sample is not suitable for standard ROUGE evaluation without separate human references.",
+  "limitations": [
+    "The sample is selected deterministically from sorted files in selected subsets and is not a representative benchmark.",
+    "Roman Hinglish coverage is not claimed unless reflected by the observed script profiles.",
+    "The raw records contain no verified title or source URL, so those fields are null."
+  ]
+}

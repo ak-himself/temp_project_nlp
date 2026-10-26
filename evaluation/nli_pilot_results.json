@@ -1,0 +1,748 @@
+{
+  "model_id": "MoritzLaurer/multilingual-MiniLMv2-L6-mnli-xnli",
+  "model_revision": "0a71e92a985b6e1ad1828cf67ce9c459639c1dca",
+  "device": "cpu",
+  "id2label": {
+    "0": "entailment",
+    "1": "neutral",
+    "2": "contradiction"
+  },
+  "example_count": 36,
+  "metrics": {
+    "accuracy": 0.9166666666666666,
+    "macro_f1": 0.9163636363636364,
+    "per_class": {
+      "entailment": {
+        "precision": 0.9230769230769231,
+        "recall": 1.0,
+        "f1": 0.9600000000000001
+      },
+      "contradiction": {
+        "precision": 0.8461538461538461,
+        "recall": 0.9166666666666666,
+        "f1": 0.8799999999999999
+      },
+      "neutral": {
+        "precision": 1.0,
+        "recall": 0.8333333333333334,
+        "f1": 0.9090909090909091
+      }
+    },
+    "confusion_matrix": {
+      "entailment": {
+        "entailment": 12,
+        "contradiction": 0,
+        "neutral": 0
+      },
+      "contradiction": {
+        "entailment": 1,
+        "contradiction": 11,
+        "neutral": 0
+      },
+      "neutral": {
+        "entailment": 0,
+        "contradiction": 2,
+        "neutral": 10
+      }
+    }
+  },
+  "by_category": {
+    "english": {
+      "accuracy": 1.0,
+      "macro_f1": 1.0,
+      "per_class": {
+        "entailment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "contradiction": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "entailment": {
+          "entailment": 4,
+          "contradiction": 0,
+          "neutral": 0
+        },
+        "contradiction": {
+          "entailment": 0,
+          "contradiction": 4,
+          "neutral": 0
+        },
+        "neutral": {
+          "entailment": 0,
+          "contradiction": 0,
+          "neutral": 4
+        }
+      }
+    },
+    "hindi": {
+      "accuracy": 0.9166666666666666,
+      "macro_f1": 0.9153439153439153,
+      "per_class": {
+        "entailment": {
+          "precision": 0.8,
+          "recall": 1.0,
+          "f1": 0.888888888888889
+        },
+        "contradiction": {
+          "precision": 1.0,
+          "recall": 0.75,
+          "f1": 0.8571428571428571
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        }
+      },
+      "confusion_matrix": {
+        "entailment": {
+          "entailment": 4,
+          "contradiction": 0,
+          "neutral": 0
+        },
+        "contradiction": {
+          "entailment": 1,
+          "contradiction": 3,
+          "neutral": 0
+        },
+        "neutral": {
+          "entailment": 0,
+          "contradiction": 0,
+          "neutral": 4
+        }
+      }
+    },
+    "code_mixed": {
+      "accuracy": 0.8333333333333334,
+      "macro_f1": 0.8222222222222223,
+      "per_class": {
+        "entailment": {
+          "precision": 1.0,
+          "recall": 1.0,
+          "f1": 1.0
+        },
+        "contradiction": {
+          "precision": 0.6666666666666666,
+          "recall": 1.0,
+          "f1": 0.8
+        },
+        "neutral": {
+          "precision": 1.0,
+          "recall": 0.5,
+          "f1": 0.6666666666666666
+        }
+      },
+      "confusion_matrix": {
+        "entailment": {
+          "entailment": 4,
+          "contradiction": 0,
+          "neutral": 0
+        },
+        "contradiction": {
+          "entailment": 0,
+          "contradiction": 4,
+          "neutral": 0
+        },
+        "neutral": {
+          "entailment": 0,
+          "contradiction": 2,
+          "neutral": 2
+        }
+      }
+    }
+  },
+  "latency_ms": {
+    "mean": 14.397417222236678,
+    "median": 14.15253200002553
+  },
+  "truncated_count": 0,
+  "results": [
+    {
+      "category": "english",
+      "record_id": "uk-wales-56321577",
+      "evidence": "The Met Office has issued a yellow weather warning for wind covering Wales and England, starting from 21:00 GMT on Wednesday evening.",
+      "claim": "A yellow wind warning covers Wales and England.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9862593412399292,
+        "neutral": 0.010631496086716652,
+        "contradiction": 0.0031091792043298483
+      },
+      "token_count": 42,
+      "truncated": false,
+      "latency_ms": 22.30036499986454
+    },
+    {
+      "category": "english",
+      "record_id": "uk-wales-56321577",
+      "evidence": "Travel and power are both likely to be disrupted, with the warning to remain in place until 15:00 on Thursday.",
+      "claim": "Travel and power will definitely be unaffected.",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.08286342769861221,
+        "neutral": 0.13463790714740753,
+        "contradiction": 0.7824986577033997
+      },
+      "token_count": 38,
+      "truncated": false,
+      "latency_ms": 20.580594999955792
+    },
+    {
+      "category": "english",
+      "record_id": "uk-wales-56321577",
+      "evidence": "Gusts of 55mph (88kmh) are likely and could hit up to 70mph on coasts and hills, with heavy and blustery showers.",
+      "claim": "The warning was issued in Scotland.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.0018728917930275202,
+        "neutral": 0.988106369972229,
+        "contradiction": 0.010020795278251171
+      },
+      "token_count": 49,
+      "truncated": false,
+      "latency_ms": 21.558579999691574
+    },
+    {
+      "category": "english",
+      "record_id": "uk-scotland-highlands-islands-11069985",
+      "evidence": "The device stands 22.5m (73ft) tall, weighs 1,300 tonnes and has two sets of blades on a single unit.",
+      "claim": "The device is 22.5m tall and weighs 1,300 tonnes.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9914562106132507,
+        "neutral": 0.005465279798954725,
+        "contradiction": 0.0030785314738750458
+      },
+      "token_count": 55,
+      "truncated": false,
+      "latency_ms": 21.946375000425178
+    },
+    {
+      "category": "english",
+      "record_id": "uk-scotland-highlands-islands-11069985",
+      "evidence": "It could generate enough power for 1,000 homes.",
+      "claim": "It could generate enough power for 10,000 homes.",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.04908803477883339,
+        "neutral": 0.023169249296188354,
+        "contradiction": 0.9277427196502686
+      },
+      "token_count": 22,
+      "truncated": false,
+      "latency_ms": 10.045097999864083
+    },
+    {
+      "category": "english",
+      "record_id": "uk-scotland-highlands-islands-11069985",
+      "evidence": "Trials on the device will now be run at the European Marine Energy Centre test site off Eday.",
+      "claim": "The trials will be run in London.",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.0032721671741455793,
+        "neutral": 0.02761417254805565,
+        "contradiction": 0.9691136479377747
+      },
+      "token_count": 34,
+      "truncated": false,
+      "latency_ms": 15.23304400006964
+    },
+    {
+      "category": "english",
+      "record_id": "uk-england-leeds-45776523",
+      "evidence": "The man was taken to hospital for treatment but his condition is not known.",
+      "claim": "The man was taken to hospital, but his condition is unknown.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9684520959854126,
+        "neutral": 0.0078921252861619,
+        "contradiction": 0.023655753582715988
+      },
+      "token_count": 34,
+      "truncated": false,
+      "latency_ms": 16.39195899997503
+    },
+    {
+      "category": "english",
+      "record_id": "uk-england-leeds-45776523",
+      "evidence": "The force has appealed for information.",
+      "claim": "The force did not ask the public for information.",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.004390913527458906,
+        "neutral": 0.00982382707297802,
+        "contradiction": 0.9857853055000305
+      },
+      "token_count": 22,
+      "truncated": false,
+      "latency_ms": 13.594736999948509
+    },
+    {
+      "category": "english",
+      "record_id": "uk-england-leeds-45776523",
+      "evidence": "the area has been cordoned off and officers remain at the scene.",
+      "claim": "The incident happened at an airport.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.002838647458702326,
+        "neutral": 0.9473364353179932,
+        "contradiction": 0.04982498288154602
+      },
+      "token_count": 27,
+      "truncated": false,
+      "latency_ms": 14.523151000048529
+    },
+    {
+      "category": "english",
+      "record_id": "uk-scotland-highlands-islands-11069985",
+      "evidence": "The device stands 22.5m (73ft) tall, weighs 1,300 tonnes and has two sets of blades on a single unit.",
+      "claim": "The device is 73 feet tall.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.7121456265449524,
+        "neutral": 0.030576104298233986,
+        "contradiction": 0.25727829337120056
+      },
+      "token_count": 45,
+      "truncated": false,
+      "latency_ms": 16.794934999779798
+    },
+    {
+      "category": "english",
+      "record_id": "uk-wales-56321577",
+      "evidence": "the warning to remain in place until 15:00 on Thursday.",
+      "claim": "The warning is for rain rather than wind.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.00774987181648612,
+        "neutral": 0.9234631657600403,
+        "contradiction": 0.06878697872161865
+      },
+      "token_count": 26,
+      "truncated": false,
+      "latency_ms": 14.682325000194396
+    },
+    {
+      "category": "english",
+      "record_id": "uk-england-leeds-45776523",
+      "evidence": "Police were called to the scene outside the Coral shop on Compton Road in Harehills just before 14:00 BST.",
+      "claim": "The shop was closed for renovations the next day.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.0043290890753269196,
+        "neutral": 0.7969395518302917,
+        "contradiction": 0.19873134791851044
+      },
+      "token_count": 40,
+      "truncated": false,
+      "latency_ms": 16.063406999819563
+    },
+    {
+      "category": "hindi",
+      "record_id": "international-50010000",
+      "evidence": "नेपाल में इस दौरे की भरपूर तैयारियां चल रही हैं.",
+      "claim": "नेपाल में इस दौरे की तैयारियां चल रही हैं।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9947081804275513,
+        "neutral": 0.003460681065917015,
+        "contradiction": 0.0018310711020603776
+      },
+      "token_count": 27,
+      "truncated": false,
+      "latency_ms": 14.15253200002553
+    },
+    {
+      "category": "hindi",
+      "record_id": "international-50010000",
+      "evidence": "23 साल बाद कोई चीनी राष्ट्रपति नेपाल पहुंच रहा है.",
+      "claim": "23 साल बाद कोई भारतीय राष्ट्रपति नेपाल पहुंच रहा है।",
+      "expected": "contradiction",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.8384511470794678,
+        "neutral": 0.006819829810410738,
+        "contradiction": 0.15472900867462158
+      },
+      "token_count": 26,
+      "truncated": false,
+      "latency_ms": 14.369723000072554
+    },
+    {
+      "category": "hindi",
+      "record_id": "international-50010000",
+      "evidence": "नेपाल में इस दौरे की भरपूर तैयारियां चल रही हैं.",
+      "claim": "नेपाल की राजधानी काठमांडू में बारिश हो रही है।",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.0015559394378215075,
+        "neutral": 0.9905592203140259,
+        "contradiction": 0.007884790189564228
+      },
+      "token_count": 30,
+      "truncated": false,
+      "latency_ms": 15.032286000405293
+    },
+    {
+      "category": "hindi",
+      "record_id": "vert-fut-45498890",
+      "evidence": "राजी केवट ने साल 2014 में ये ऑपरेशन कराया था.",
+      "claim": "राजी केवट ने 2014 में यह ऑपरेशन कराया था।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9946915507316589,
+        "neutral": 0.0025814890395849943,
+        "contradiction": 0.002726885722950101
+      },
+      "token_count": 29,
+      "truncated": false,
+      "latency_ms": 14.519703000132722
+    },
+    {
+      "category": "hindi",
+      "record_id": "vert-fut-45498890",
+      "evidence": "उनकी नसबंदी भारत के सरकारी नसबंदी शिविर में हुआ था.",
+      "claim": "उनकी नसबंदी किसी निजी अस्पताल में हुई थी।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.024069515988230705,
+        "neutral": 0.015161660499870777,
+        "contradiction": 0.9607688188552856
+      },
+      "token_count": 27,
+      "truncated": false,
+      "latency_ms": 14.365983000061533
+    },
+    {
+      "category": "hindi",
+      "record_id": "vert-fut-45498890",
+      "evidence": "इसके बाद राजी ने अपनी बहन शिव कुमारी केवट को भी नसबंदी कराने की सलाह दी.",
+      "claim": "शिव कुमारी केवट ने 2015 में यह सलाह दी थी।",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.002054812852293253,
+        "neutral": 0.9938648343086243,
+        "contradiction": 0.004080326296389103
+      },
+      "token_count": 38,
+      "truncated": false,
+      "latency_ms": 12.515117000020837
+    },
+    {
+      "category": "hindi",
+      "record_id": "india-49258186",
+      "evidence": "संसद के दोनों सदनों ने पास कर दिया.",
+      "claim": "संसद के दोनों सदनों ने इसे पारित कर दिया।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.6137399673461914,
+        "neutral": 0.38502949476242065,
+        "contradiction": 0.001230557099916041
+      },
+      "token_count": 25,
+      "truncated": false,
+      "latency_ms": 12.443620999874838
+    },
+    {
+      "category": "hindi",
+      "record_id": "india-49258186",
+      "evidence": "जम्मू-कश्मीर अब दो केंद्र शासित प्रदेश में विभाजित हो गया है.",
+      "claim": "जम्मू-कश्मीर एक ही केंद्र शासित प्रदेश बना रहा।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.21141134202480316,
+        "neutral": 0.0047444128431379795,
+        "contradiction": 0.7838441729545593
+      },
+      "token_count": 33,
+      "truncated": false,
+      "latency_ms": 12.59520799976599
+    },
+    {
+      "category": "hindi",
+      "record_id": "india-49258186",
+      "evidence": "केंद्र सरकार ने जम्मू-कश्मीर राज्य पुर्नगठन बिल का भी प्रस्ताव रखा, जिसे संसद के दोनों सदनों ने पास कर दिया.",
+      "claim": "इस विधेयक पर संयुक्त राष्ट्र में मतदान हुआ।",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.010437819175422192,
+        "neutral": 0.9182807803153992,
+        "contradiction": 0.07128137350082397
+      },
+      "token_count": 40,
+      "truncated": false,
+      "latency_ms": 13.834848999977112
+    },
+    {
+      "category": "hindi",
+      "record_id": "050225_iraq_violence",
+      "evidence": "अमरीकी सेना के एक प्रवक्ता ने कहा कि सैनिक बग़दाद के उत्तरी शहर तरमीया में पैदल गश्त लगा रहे थे",
+      "claim": "अमरीकी सैनिक तरमीया में पैदल गश्त लगा रहे थे।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9917235970497131,
+        "neutral": 0.005199342966079712,
+        "contradiction": 0.0030770516023039818
+      },
+      "token_count": 52,
+      "truncated": false,
+      "latency_ms": 14.28829200040127
+    },
+    {
+      "category": "hindi",
+      "record_id": "050225_iraq_violence",
+      "evidence": "उन पर बमों से हमला किया गया.",
+      "claim": "उन पर किसी हथियार से हमला नहीं हुआ।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.003385022981092334,
+        "neutral": 0.0015674952883273363,
+        "contradiction": 0.9950474500656128
+      },
+      "token_count": 22,
+      "truncated": false,
+      "latency_ms": 9.977224999602186
+    },
+    {
+      "category": "hindi",
+      "record_id": "050225_iraq_violence",
+      "evidence": "मौक़े पर मौजूद लोगों का कहना है कि बमों को संभवतः सड़क के किनारे पेड़ों में छुपाया गया था.",
+      "claim": "हमले के बाद बग़दाद में कर्फ्यू लगाया गया।",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.3583718538284302,
+        "neutral": 0.4999246597290039,
+        "contradiction": 0.1417035162448883
+      },
+      "token_count": 47,
+      "truncated": false,
+      "latency_ms": 13.910868000039045
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1000.txt",
+      "evidence": "सरकार ने ऑटोमोबाइल इंडस्ट्री के लिए तय की गई 25,938 करोड़ रुपए की प्रोडक्शन लिंक्ड इन्सेंटिव (PLI) स्कीम के लिए 20 कंपनियों को शॉर्टलिस्ट कर लिया है।",
+      "claim": "PLI स्कीम के लिए 20 कंपनियां शॉर्टलिस्ट की गई हैं।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9930605888366699,
+        "neutral": 0.005338684655725956,
+        "contradiction": 0.001600772375240922
+      },
+      "token_count": 72,
+      "truncated": false,
+      "latency_ms": 16.883522999705747
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1000.txt",
+      "evidence": "इसके लिए 115 कंपनियों ने ऐप्लीकेशन दिया था।",
+      "claim": "इस स्कीम के लिए केवल 15 कंपनियों ने ऐप्लीकेशन दिया था।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.0015186156379058957,
+        "neutral": 0.0027364008128643036,
+        "contradiction": 0.9957450032234192
+      },
+      "token_count": 33,
+      "truncated": false,
+      "latency_ms": 12.694023000221932
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1000.txt",
+      "evidence": "चैंपियन OEM सेल्स प्राइस से जुड़ा प्लान है।",
+      "claim": "यह योजना केवल software companies के लिए है।",
+      "expected": "neutral",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.0005717577878385782,
+        "neutral": 0.008918865583837032,
+        "contradiction": 0.9905093908309937
+      },
+      "token_count": 27,
+      "truncated": false,
+      "latency_ms": 11.331916000017372
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1001.txt",
+      "evidence": "दिल्ली से मुंबई तक कई शहरों में बंद रहा ट्विटर",
+      "claim": "Twitter कई शहरों में बंद रहा।",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9928101301193237,
+        "neutral": 0.005350529681891203,
+        "contradiction": 0.0018393499776721
+      },
+      "token_count": 21,
+      "truncated": false,
+      "latency_ms": 10.087853000186442
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1001.txt",
+      "evidence": "ट्विटर ऐप और वेबसाइट पूरी तरह बंद हो गई थीं।",
+      "claim": "Twitter app और website पूरी तरह चालू थीं।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.07283834367990494,
+        "neutral": 0.0016451561823487282,
+        "contradiction": 0.9255165457725525
+      },
+      "token_count": 24,
+      "truncated": false,
+      "latency_ms": 10.916718000316905
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:bhaskar/Part1/business_1001.txt",
+      "evidence": "TweetDeck जैसी सर्विसेज कुछ यूजर्स के लिए काम कर रहीं थीं।",
+      "claim": "Twitter outage के कारण सभी users ने अपना password बदल दिया।",
+      "expected": "neutral",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.0005136699182912707,
+        "neutral": 0.06168799474835396,
+        "contradiction": 0.9377983212471008
+      },
+      "token_count": 35,
+      "truncated": false,
+      "latency_ms": 12.809380999897257
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pm-speech/100.txt",
+      "evidence": "Energy, food processing, logistics, infrastructure, machinery, software आदि अनेक क्षेत्रों में डेनिश कंपनियां लंबे समय से भारत में काम कर रही हैं।",
+      "claim": "Danish companies have worked in India in several sectors for a long time.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9810753464698792,
+        "neutral": 0.017957201227545738,
+        "contradiction": 0.0009674890316091478
+      },
+      "token_count": 55,
+      "truncated": false,
+      "latency_ms": 15.37853800027733
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pm-speech/100.txt",
+      "evidence": "भारत की प्रगति के लिए जो हमारा vision हैं",
+      "claim": "भारत की प्रगति के लिए कोई vision नहीं है।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.0023600866552442312,
+        "neutral": 0.0014405782567337155,
+        "contradiction": 0.9961993098258972
+      },
+      "token_count": 23,
+      "truncated": false,
+      "latency_ms": 11.536583000179235
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pm-speech/100.txt",
+      "evidence": "हमने आज एक निर्णय यह भी लिया, कि हम अपने सहयोग के दायरे का सतत रूप से विस्तार करते रहेंगे",
+      "claim": "The meeting took place in Mumbai.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.001669459044933319,
+        "neutral": 0.994118332862854,
+        "contradiction": 0.00421221274882555
+      },
+      "token_count": 33,
+      "truncated": false,
+      "latency_ms": 11.414309999963734
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pib/10007.txt",
+      "evidence": "मुम्बई बंदरगाह पर वाटरफ्रंट विकास के तहत दो तैरते रेस्त्रां का उद्घाटन करेंगे।",
+      "claim": "Mumbai port will have two floating restaurants inaugurated.",
+      "expected": "entailment",
+      "predicted": "entailment",
+      "scores": {
+        "entailment": 0.9637474417686462,
+        "neutral": 0.032010093331336975,
+        "contradiction": 0.004242474678903818
+      },
+      "token_count": 41,
+      "truncated": false,
+      "latency_ms": 13.185162999889144
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pib/10007.txt",
+      "evidence": "इन रेस्त्रां में 500 जीवन रक्षक जैकेट और रबर की 24 छोटी नौकाएं उपलब्ध रहेंगी।",
+      "claim": "इन रेस्त्रां में कोई life jacket उपलब्ध नहीं होगी।",
+      "expected": "contradiction",
+      "predicted": "contradiction",
+      "scores": {
+        "entailment": 0.001330251689068973,
+        "neutral": 0.001454150304198265,
+        "contradiction": 0.9972156286239624
+      },
+      "token_count": 41,
+      "truncated": false,
+      "latency_ms": 13.328014999842708
+    },
+    {
+      "category": "code_mixed",
+      "record_id": "mutant:pib/10007.txt",
+      "evidence": "मुम्बई-ऐलिफेंटा रोपवे समुद्र पर बनी दुनिया की सबसे अधिक लगभग 8 किलोमीटर लम्बी होगी।",
+      "claim": "The ropeway will connect Delhi and Agra.",
+      "expected": "neutral",
+      "predicted": "neutral",
+      "scores": {
+        "entailment": 0.2932615876197815,
+        "neutral": 0.6459727883338928,
+        "contradiction": 0.06076555326581001
+      },
+      "token_count": 40,
+      "truncated": false,
+      "latency_ms": 13.021019000007072
+    }
+  ]
+}
